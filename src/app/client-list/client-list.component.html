@@ -1,0 +1,56 @@
+<h2>Lista de clientes</h2>
+<table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+  <!-- Columna ID -->
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+    <td mat-cell *matCellDef="let client"> {{ client.id }} </td>
+  </ng-container>
+
+  <!-- Columna Nombre -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Nombre </th>
+    <td mat-cell *matCellDef="let client"> {{ client.name }} </td>
+  </ng-container>
+
+  <!-- Columna Apellido -->
+  <ng-container matColumnDef="lastName">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Apellido </th>
+    <td mat-cell *matCellDef="let client"> {{ client.lastName }} </td>
+  </ng-container>
+
+  <!-- Columna Edad -->
+  <ng-container matColumnDef="age">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Edad </th>
+    <td mat-cell *matCellDef="let client"> {{ client.age }} </td>
+  </ng-container>
+
+  <!-- Columna Calle -->
+  <ng-container matColumnDef="calle">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Calle </th>
+    <td mat-cell *matCellDef="let client"> {{ client.calle }} </td>
+  </ng-container>
+
+  <!-- Columna Colonia -->
+  <ng-container matColumnDef="colonia">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Colonia </th>
+    <td mat-cell *matCellDef="let client"> {{ client.colonia }} </td>
+  </ng-container>
+
+  <!-- Columna Ciudad -->
+  <ng-container matColumnDef="ciudad">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Ciudad </th>
+    <td mat-cell *matCellDef="let client"> {{ client.ciudad }} </td>
+  </ng-container>
+
+  <!-- Columna País -->
+  <ng-container matColumnDef="pais">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> País </th>
+    <td mat-cell *matCellDef="let client"> {{ client.pais }} </td>
+  </ng-container>
+
+  <!-- Encabezado de la tabla -->
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <!-- Filas de la tabla -->
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
